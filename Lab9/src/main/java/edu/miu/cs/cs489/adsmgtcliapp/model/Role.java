@@ -14,7 +14,10 @@ import java.util.List;
 @Table(name="roles")
 public class Role {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer roleId;
     private String roleName;
+    @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
+    private List<User> users;
 
 }

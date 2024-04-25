@@ -29,7 +29,7 @@ public class UserAuthController {
         this.usersInterface = usersInterface;
     }
 
-    @PostMapping(value = {"adsweb/api/v1/login"})
+    @PostMapping(value = {"/login"})
     public ResponseEntity<UserAuthResponse> authenticateUser( @RequestBody UserAuthRequest userAuthRequest) throws Exception {
         UserAuthResponse userAuthResponse = null;
         try {

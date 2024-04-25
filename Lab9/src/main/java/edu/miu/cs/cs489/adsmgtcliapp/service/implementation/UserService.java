@@ -21,6 +21,6 @@ public class UserService implements UsersInterface {
 
     @Override
     public User registerNewUser(User user) {
-        return null;
+        return userRepository.save(user);
     }
 }

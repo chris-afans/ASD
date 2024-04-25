@@ -38,6 +38,8 @@ public class AdsWebAPISecurityConfig {
                         auth -> {
                             auth
                                     .requestMatchers("/adsweb/api/v1/surgerylocations").permitAll()
+                                    .requestMatchers("/error").permitAll()
+                                    .requestMatchers("/adsweb/api/v1/public/auth/**").permitAll()
                                     .requestMatchers("/adsweb/api/v1/patient/**").authenticated()
                                     .requestMatchers("/adsweb/api/v1/dentist/**").authenticated()
                                     .requestMatchers("/adsweb/api/v1/appointment/**").authenticated()

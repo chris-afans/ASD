@@ -28,9 +28,14 @@ public class User implements UserDetails {
     private boolean credentialsNonExpired;
     private boolean enabled;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "roleId")
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "userId")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "roleId")}
+    )
     private List<Role> roles;
+
 
     public User(Integer userId, String username, String password, String firstName,
                 String lastName, String email, boolean accountNonExpired,
