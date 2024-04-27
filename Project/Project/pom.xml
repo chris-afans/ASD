@@ -9,12 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.miu.cs.cs489</groupId>
-	<artifactId>lab6</artifactId>
+	<artifactId>project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>lab6</name>
+	<name>project</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
